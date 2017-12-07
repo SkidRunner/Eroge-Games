@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.lessvoid.com/nifty-gui">
+	<useStyles filename="nifty-default-styles.xml" />
+	<useControls filename="nifty-default-controls.xml" />
+
+	<screen id="title" controller="io.skidrunner.doxies.states.NiftyAppState">
+		<layer childLayout="vertical" padding="10px">
+			<panel childLayout="center" width="100%" height="*">
+				<text style="nifty-label" text="Dungeons &amp; Doxies"/>
+			</panel>
+			<panel childLayout="center" width="100%" height="*">
+				<control id="loadButton" name="button" label="Start">
+					<interact onClick="gotoScreen(select)" />
+				</control>
+			</panel>
+			<panel childLayout="vertical" width="100%">
+				<text style="nifty-label" text="ALL RIGHTS RESERVED"/>
+				<text style="nifty-label" text="COPYRIGHT 2017 SKIDRUNNER"/>
+			</panel>
+		</layer>
+	</screen>
+	
+	<screen id="select" controller="io.skidrunner.doxies.states.NiftyAppState">
+		<layer childLayout="center" padding="10px">
+			<panel childLayout="vertical" style="nifty-panel" align="left">
+
+			</panel>
+		</layer>
+	</screen>
+	
+	<popup id="options" childLayout="center">
+		<effect>
+			<onStartScreen name="fade" startColor="#0000" endColor="#000a" length="250" />
+			<onEndScreen name="fade" startColor="#000a" endColor="#0000" length="250" startDelay="250" />
+		</effect>
+		<panel childLayout="center" style="nifty-panel" width="100%" height="100%">
+			<panel childLayout="vertical">
+				<control id="button0" name="button" label="Help">
+					<interact onClick="gotoScreen(loadGame)" />
+				</control>
+				<control id="button1" name="button" label="Advanced">
+					<interact onClick="gotoScreen(newGame)" />
+				</control>
+				<control id="button2" name="button" label="Sound">
+					<interact onClick="showPopup(options)" />
+				</control>
+				<control id="button3" name="button" label="credits">
+					<interact onClick="showPopup(options)" />
+				</control>
+				<panel childLayout="center" width="100%">
+					<control id="button4" name="button" label="Close" align="right">
+						<interact onClick="closePopup(options)" />
+					</control>
+				</panel>
+			</panel>
+		</panel>
+	</popup>
+	
+	<popup id="score" childLayout="center">
+	</popup>
+	
+	<popup id="mail" childLayout="center">
+	</popup>
+
+</nifty>

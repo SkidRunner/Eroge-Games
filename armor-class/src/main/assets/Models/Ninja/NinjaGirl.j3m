@@ -1,0 +1,5 @@
+Material Ninja Girl : Common/MatDefs/Misc/Unshaded.j3md {
+     MaterialParameters {
+         ColorMap : "Models/Ninja/NinjaGirl.png"
+     }
+}

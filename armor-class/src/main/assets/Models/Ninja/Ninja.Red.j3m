@@ -1,0 +1,5 @@
+Material Ninja Red : Common/MatDefs/Misc/Unshaded.j3md {
+     MaterialParameters {
+         ColorMap : "Models/Ninja/Ninja.Red.png"
+     }
+}
